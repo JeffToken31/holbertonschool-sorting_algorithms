@@ -11,7 +11,8 @@
 void selection_sort(int *array, size_t size)
 {
 
-	size_t i, j, position, save;
+	size_t i, j, position;
+	int save;
 
 	if (array == NULL || size == 0)
 		return;
