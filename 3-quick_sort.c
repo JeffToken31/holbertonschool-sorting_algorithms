@@ -49,7 +49,7 @@ int lomuto_part(int *array, int low, int high, size_t size)
 			i++;
 		}
 	}
-	if (i != high)
+	if (i != high && array[i] != array[high])
 	{
 		swap(&array[high], &array[i]);
 		print_array(array, size);
