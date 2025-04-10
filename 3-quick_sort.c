@@ -41,12 +41,14 @@ int lomuto_part(int *array, int low, int high, size_t size)
 		{
 			swap(&array[j], &array[i]);
 			print_array(array, size);
+			i++;
 		}
-
 	}
-	swap(&array[high], &array[i]);
-	print_array(array, size);
-
+	if (i != array[high])
+	{
+		swap(&array[high], &array[i]);
+		print_array(array, size);
+	}
 	return (i);
 }
 /**
